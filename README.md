@@ -66,3 +66,15 @@ Python test.py
 Cd Transfuse-PVT
 Python test.py
 ```
+### Fuse results via voting
+```
+python post-processing.py
+```
+
+### Eval result
+```
+python eval_medical.py
+```
+
+### FAQ
+If you want to improve the usability or any piece of advice, please feel free to contact me directly (bodong.cv@gmail.com).
