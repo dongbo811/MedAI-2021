@@ -15,3 +15,47 @@ Python 3.8
 Pytorch 1.7.1
 torchvision 0.8.2
 ```
+
+### Clone
+```
+git clone https://github.com/dongbo811/MedAI-2021.git
+cd MedAI-2021
+```
+
+## Data preparation
+The development dataset for the instrument segmentation task can be downloaded via: {https://datasets.simula.no/kvasir-instrument/}. Then extract the archive to a destination of your choice. 
+
+Use the link below to access and download the development dataset for the polyp segmentation task: {https://datasets.simula.no/kvasir-seg/}.  
+
+If you want to use 5-fold cross-validation, you need to divide it into 5 different training sets and test sets. Here, we provide a simple script for your convenience and the data structures are shown in follows.
+```
+Python data-process.py
+data/train/images/*.jpg
+data/train/masks/*.jpg
+data/test/images/*.jpg
+data/test/masks/*.jpg
+```
+## Training
+```
+% training in a way of 5-fold cross-validation 
+Cd Polyp-PVT
+Python train.py
+% training in a way of 5-fold cross-validation 
+Cd Sinv2-PVT
+Python train.py
+% training in a way of 5-fold cross-validation 
+Cd Transfuse-PVT
+Python train.py
+```
+## Inference with trained models
+```
+% testingwith 5 different trained models 
+Cd Polyp-PVT
+Python test.py
+% testingwith 5 different trained models  
+Cd Sinv2-PVT
+Python test.py
+% testingwith 5 different trained models 
+Cd Transfuse-PVT
+Python test.py
+```
