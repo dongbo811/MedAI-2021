@@ -28,12 +28,19 @@ The development dataset for the instrument segmentation task can be downloaded v
 Use the link below to access and download the development dataset for the polyp segmentation task: {https://datasets.simula.no/kvasir-seg/}.  
 
 If you want to use 5-fold cross-validation, you need to divide it into 5 different training sets and test sets. Here, we provide a simple script for your convenience and the data structures are shown in follows.
+
 ```
-Python data-process.py
-data/train/images/*.jpg
-data/train/masks/*.jpg
-data/test/images/*.jpg
-data/test/masks/*.jpg
+5-fold cross-validation
+1_test, 1_train
+2_test, 2_train
+3_test, 3_train
+4_test, 4_train
+5_test, 5_train
+
+data/*_train/images/*.jpg
+data/*_train/masks/*.jpg
+data/*_test/images/*.jpg
+data/*_test/masks/*.jpg
 ```
 ## Training
 ```
